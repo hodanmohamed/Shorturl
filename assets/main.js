@@ -1,4 +1,6 @@
-const apiKey = '1df6b977e1eb45c29afc4b697c396eb6';
+import {REBRANDLY_API_KEY} from "./apikey.js";
+
+const apiKey = REBRANDLY_API_KEY;
 const url = 'https://api.rebrandly.com/v1/links';
 
 const inputField = document.querySelector('#url-input');

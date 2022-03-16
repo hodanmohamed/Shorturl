@@ -1,3 +1,5 @@
+const copyInput = document.querySelector('#copy-input');
+
 const renderResponse = (res) => {
     if (res.errors) {
         copyInput.value = "Sorry, couldn't format your URL. Try again :(";
