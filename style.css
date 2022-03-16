@@ -1,0 +1,182 @@
+/*
+   Created on     : 14/03/2022
+   Last Updated   : 15/03/2022
+   Website Name   : SHORT URL
+   Description    : SHORT URL | URL Shortener - Short Urls
+   Author         : HODAN MOHAMED
+*/
+
+@charset "UTF-8";
+
+/* ------------------------------------------*/
+/* -------->>> CSS FOR MAIN SITE <<<---------*/
+/* ------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Righteous', cursive;
+    font-weight: 300;
+}
+
+body {
+    height: 85vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: #100F22;
+    width: 83%;
+}
+
+/* --------------------------------------*/
+/* -------->>> CSS FOR TITLE <<<---------*/
+/* --------------------------------------*/
+.shorturl .title {
+    font-size: 45px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 5pt;
+}
+
+.shorturl {
+    display: grid;
+    row-gap: 20px;
+    width: 150%;
+}
+
+/* --------------------------------------------------*/
+/* -------->>> CSS FOR PASTE URL SECTION <<<---------*/
+/* --------------------------------------------------*/
+.enter-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enter-link input {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    height: 60px;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 20px;
+    color: #100F22;
+    width: 78%;
+    margin-right: 8px;
+}
+
+.enter-link button {
+    cursor: pointer;
+    width: 20%;
+    height: 59px;
+    font-size: 18px;
+    border-radius: 8px;
+    color: #100F22;
+    background: #FF9DF5;
+}
+
+/* ---------------------------------------------------------*/
+/* -------->>> CSS FOR COPY TO CLIPBOARD SECTION<<<---------*/
+/* ---------------------------------------------------------*/
+.copy-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #87568B;
+    border-radius: 8px;
+    padding: 10px 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.copy-link input {
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+    padding-left: 20px;
+    color: #fff;
+    background-color: #87568B;
+    width: 90%;
+}
+
+
+.copy-link input::placeholder {
+    color: #fff;
+}
+
+.copy-link button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 3px;
+    color: #fff;
+    background: #643F67;
+    float: left;
+}
+
+
+/* ------------------------------------*/
+/* -------->>> CSS FOR SVG <<<---------*/
+/* ------------------------------------*/
+.curved-shape-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.curved-shape-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(119% + 1.3px);
+    height: 155px;
+}
+
+.curved-shape-bottom .shape-fill {
+    fill: #FF9DF5;
+}
+
+
+/* ----------------------------------------------*/
+/* -------->>> CSS FOR MEDIA QUERIES <<<---------*/
+/* ----------------------------------------------*/
+/* Mobile devices ----------- */
+@media only screen and (min-device-width : 319px) and (max-device-width : 480px) {
+    .shorturl {
+        margin: 0 auto;
+    }
+
+    .shorturl .title {
+        font-size: 30px;
+    }
+
+    .copy-link {
+        width: 82%;
+        margin: 0 auto;
+    }
+
+    .enter-link input {
+        width: 60%;
+    }
+
+    .curved-shape-bottom {
+        position: fixed;
+        width: 100%;
+    }
+}
+
+/* Tablets or iPads ----------- */
+@media only screen and (min-device-width : 480px) and (max-device-width : 768px) {
+    body {
+        width: 73%;
+    }
+}
